@@ -1,0 +1,38 @@
+.page-head{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 28px;
+    margin: 10px auto;
+    width: 70%;
+    max-width: 450px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid #007bff;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    transition: all 0.4s ease-in-out;
+}
+
+.container a:hover{
+    transform: scale(1.1);
+    background-color: #007bff;
+    color: white;
+}

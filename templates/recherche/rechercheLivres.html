@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+
+{% block body %}
+
+
+
+<h1 class="page-head">Recherche Livre</h1>
+
+<form action="/resultat" method="post">
+  <div class="conteunair">
+    <div class="form-group">
+      <label for="recherche">Recherche :</label>
+      <input
+        type="text"
+        class="form-control"
+        id="recherche"
+        name="recherche"
+        placeholder="chercher pour livre"
+        required
+      />
+    </div>
+    <div>
+      <input type="submit" class="btn btn-outline-primary" value="Recherche" />
+      <input
+        type="reset"
+        class="btn btn-outline-secondary"
+        value="Réinitialiser"
+      />
+    </div>
+  </div>
+</form>
+<div class="text-center my-4">
+    <a href="/" class="return-btn">Retour</a>
+</div>
+
+
+
+
+{% endblock %}

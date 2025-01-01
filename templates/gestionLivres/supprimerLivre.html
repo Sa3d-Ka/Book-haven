@@ -1,0 +1,52 @@
+{% extends 'base.html' %} 
+
+{% block body %}
+
+{% if notexiste is not none %}
+    {% if notexiste %}
+        <div class="alert alert-danger alert-dismissible text-center mx-5" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            Ce livre n'existe pas dans la bibliothèque!
+        </div>
+    {% else %}
+        <div class="alert alert-success alert-dismissible text-center mx-5" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            Le livre a été supprimé avec succès!
+        </div>
+    {% endif %}
+{% endif %}
+
+
+<h1 class="page-head">Supprimer Livre</h1>
+
+<form action="/supprimer-livre" method="post">
+  <div class="conteunair">
+    <div class="form-group">
+      <label for="isbn">ISBN :</label>
+      <input
+        type="text"
+        class="form-control"
+        id="isbn"
+        name="isbn"
+        placeholder="Entrer ISBN du livre à supprimer"
+        required
+      />
+    </div>
+    <div>
+      <input type="submit" class="btn btn-outline-danger" value="Supprimer" />
+      <input
+        type="reset"
+        class="btn btn-outline-secondary"
+        value="Réinitialiser"
+      />
+    </div>
+  </div>
+</form>
+<div class="text-center my-4">
+    <a href="/gestion-livres" class="return-btn">Retour</a>
+</div>
+
+
+
+
+{% endblock %}

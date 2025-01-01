@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: logoFont;
+    src: url('/static/fonts/Playlist Script.otf') format('opentype');
+  }
+
+body{
+    font-family: Arial, Tahoma;
+    background-color: #f4f4f4;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #007bff;
+    padding: 8px;
+    margin: 10px auto 50px;
+    width: 75%;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
+}
+
+header a{
+    text-decoration: none;
+}
+
+header a h2{
+    font-family: logoFont, sans-serif;
+    color: white;
+    font-weight: 200;
+    font-size: 28px;
+}

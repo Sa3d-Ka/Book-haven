@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+
+{% block body %}
+
+
+<h1 class="page-head">Afficher l'Amende</h1>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Détails du Retard et de l'Amende
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Informations</h5>
+            <p class="card-text">
+                <strong>Le retard:</strong> <span id="retard">{{retard}}</span> jours<br>
+                <strong>L'amende:</strong> <span id="amende">{{amende}}</span> Dh
+            </p>
+        </div>
+        <div class="card-footer text-muted">
+            Merci de régulariser la situation au plus vite.
+        </div>
+    </div>
+</div>
+
+<div class="text-center my-4">
+    <a href="/gestion-emprunts" class="return-btn">Retour</a>
+</div>
+
+
+
+
+{% endblock %}

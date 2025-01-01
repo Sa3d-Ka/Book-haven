@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+
+{% block body %}
+
+<p class="h1 text-center mb-2">Resultats</p>
+
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Nombre total de livres</h3>
+                    <p id="total-livres" class="card-text display-4">{{total_livres}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Nombre de livres empruntés</h3>
+                    <p id="total-empruntes" class="card-text display-4">{{total_empruntes}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title">Nombre de livres disponibles</h3>
+                    <p id="livres-disponibles" class="card-text display-4">{{livres_disponibles}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="text-center my-4">
+    <a href="/" class="btn btn-outline-danger">Retour</a>
+</div>
+{% endblock %}

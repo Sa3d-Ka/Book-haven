@@ -1,0 +1,74 @@
+{% extends 'base.html' %} 
+
+{% block body %}
+
+{% if notexiste is not none %}
+    {% if notexiste and notcin%}
+        <div class="alert alert-danger alert-dismissible text-center mx-5" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            {{notcin}}
+        </div>
+    {% elif  notexiste and notisbn%}
+        <div class="alert alert-danger alert-dismissible text-center mx-5" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            {{notisbn}}
+        </div>
+    {% elif  q%}
+        <div class="alert alert-danger alert-dismissible text-center mx-5" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            {{q}}
+        </div>
+    {% else %}
+        <div class="alert alert-success alert-dismissible text-center mx-5" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            Le livre a été emprunté avec succès!
+        </div>
+    {% endif %}
+{% endif %}
+
+
+<h1 class="page-head">Emprunter Livre</h1>
+
+<form action="/emprunter-livre" method="post">
+  <div class="conteunair">
+    <div class="form-group">
+      <label for="cin">CIN :</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cin"
+        name="cin"
+        placeholder="Entrer CIN"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="isbn">ISBN :</label>
+      <input
+        type="text"
+        class="form-control"
+        id="isbn"
+        name="isbn"
+        placeholder="Entrer ISBN du livre à emprunte"
+        required
+      />
+    </div>
+    <div>
+      <input type="submit" class="btn btn-outline-primary" value="Emprunté"/>
+      <input
+        type="reset"
+        class="btn btn-outline-secondary"
+        value="Réinitialiser"
+      />
+    </div>
+  </div>
+</form>
+
+<div class="text-center my-4">
+    <a href="/gestion-emprunts" class="return-btn">Retour</a>
+</div>
+
+
+
+
+{% endblock %}

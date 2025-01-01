@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+
+{% block body %}
+
+<p class="h1 text-center mb-2">Affichage</p>
+
+{% if LIVRES %}
+    <table class="table table-hover w-75 mx-auto my-3">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">ISBN</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Auteur</th>
+            <th scope="col">Quantite</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for isbn, info in LIVRES.items() %}
+        <tr>
+            <th scope="row">{{isbn}}</th>
+            <td>{{info['titre'] | capitalize}}</td>
+            <td>{{info['auteur'] | capitalize}}</td>
+            <td>{{info['quantite']}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+{% else %}
+<p class="text-center h4 ">Aucun livre trouvé .</p>
+{% endif %}
+
+<div class="text-center my-4">
+    <a href="/" class="btn btn-outline-danger">Retour</a>
+</div>
+
+{% endblock %}

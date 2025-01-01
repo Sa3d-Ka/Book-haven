@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block body %}
+
+<h1 class="page-head">Menu Principal</h1>
+
+<div class="container">
+  <a href="/gestion-livres"><i class="fas fa-book"></i> Gestion des Livres</a>
+  <a href="/gestion-emprunts"><i class="fas fa-calendar-check"></i> Gestion des Emprunts</a>
+  <a href="/afficher-livres"><i class="fa-solid fa-table-list"></i>Afficher Livres</a>
+  <a href="/recherche-livres"><i class="fas fa-search"></i> Recherche de Livres</a>
+  <a href="/statistiques"><i class="fas fa-chart-bar"></i> Statistiques sur les Livres</a>
+  <a href="/gestion-utilisateurs"><i class="fas fa-users"></i> Gestion des Utilisateurs</a>
+</div>
+
+{% endblock %}
